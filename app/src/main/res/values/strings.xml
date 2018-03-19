@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GoDex</string>
+    <string name="title_home">PokeDex</string>
+    <string name="title_dashboard">Counters</string>
+    <string name="title_notifications">Raids</string>
+    <string name="picture_description">Pokemon Picture</string>
+    <string name="text_default_sprite">default</string>
+    <string name="text_shiny_sprite">shiny</string>
+    <string name="gen_one_button">Gen 1</string>
+    <string name="gen_two_button">Gen 2</string>
+    <string name="gen_three_button">Gen 3</string>
+</resources>
