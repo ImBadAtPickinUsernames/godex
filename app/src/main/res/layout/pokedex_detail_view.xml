@@ -6,25 +6,25 @@
 
     <ImageView
         android:id="@+id/imgPokemon"
-        android:layout_width="55dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/imgPokemonShiny"
-        android:layout_marginLeft="97dp"
-        android:layout_marginStart="97dp"
+        android:layout_width="120dp"
+        android:layout_height="105dp"
+        android:layout_above="@+id/textShiny"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/imgPokemonShiny"
+        android:layout_toStartOf="@+id/imgPokemonShiny"
         android:contentDescription="@string/picture_description" />
 
     <ImageView
         android:id="@+id/imgPokemonShiny"
-        android:layout_width="55dp"
-        android:layout_height="50dp"
+        android:layout_width="120dp"
+        android:layout_height="105dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="33dp"
         android:contentDescription="@string/picture_description" />
 
     <TextView
@@ -36,7 +36,8 @@
         android:layout_alignRight="@+id/imgPokemonShiny"
         android:layout_alignStart="@+id/imgPokemonShiny"
         android:layout_below="@+id/imgPokemonShiny"
-        android:text="@string/text_shiny_sprite" />
+        android:text="@string/text_shiny_sprite"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/textDefault"
@@ -47,6 +48,7 @@
         android:layout_alignRight="@+id/imgPokemon"
         android:layout_alignStart="@+id/imgPokemon"
         android:layout_below="@+id/imgPokemon"
-        android:text="@string/text_default_sprite" />
+        android:text="@string/text_default_sprite"
+        android:textAlignment="center" />
 
 </RelativeLayout>

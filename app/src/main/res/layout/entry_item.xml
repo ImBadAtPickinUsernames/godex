@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imgPokemon"
-        android:layout_width="55dp"
-        android:layout_height="50dp"
+        android:layout_width="120dp"
+        android:layout_height="105dp"
         android:contentDescription="@string/picture_description" />
 
     <TextView

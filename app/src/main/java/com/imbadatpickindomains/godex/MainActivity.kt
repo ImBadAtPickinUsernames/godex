@@ -10,12 +10,11 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.entry_item.view.*
-import java.lang.reflect.Array.get
 
 class MainActivity : AppCompatActivity() {
-    var pd = PokedexData()
-    var adapter: PokedexItemAdapter? = null
-    var pokedexList = ArrayList<PokedexGridItem>()
+    private var pd = PokedexData()
+    private var adapter: PokedexItemAdapter? = null
+    private var pokedexList = ArrayList<PokedexGridItem>()
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -42,14 +41,8 @@ class MainActivity : AppCompatActivity() {
         gvEntrys.adapter = adapter
     }
 
-    class PokedexItemAdapter : BaseAdapter {
-        var pokedexList = ArrayList<PokedexGridItem>()
-        var context: Context? = null
-
-        constructor(context: Context, pokedexList: ArrayList<PokedexGridItem>) : super() {
-            this.context = context
-            this.pokedexList = pokedexList
-        }
+    class PokedexItemAdapter(context: Context, var pokedexList: ArrayList<PokedexGridItem>) : BaseAdapter() {
+        var context: Context? = context
 
         override fun getCount(): Int {
             return pokedexList.size
@@ -66,8 +59,8 @@ class MainActivity : AppCompatActivity() {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             val pokedexItem = this.pokedexList[position]
 
-            var inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            var pokedexItemView = inflator.inflate(R.layout.entry_item, null)
+            val inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val pokedexItemView = inflator.inflate(R.layout.entry_item, null)
             pokedexItemView.imgPokemon.setImageResource(pokedexItem.image!!)
             pokedexItemView.tvName.text = pokedexItem.name!!
 
