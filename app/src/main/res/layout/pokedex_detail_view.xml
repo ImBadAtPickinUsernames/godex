@@ -1,106 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imgPokemon"
-        android:layout_width="120dp"
-        android:layout_height="105dp"
-        android:layout_above="@+id/textShiny"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_toLeftOf="@+id/imgPokemonShiny"
-        android:layout_toStartOf="@+id/imgPokemonShiny"
-        android:contentDescription="@string/picture_description" />
+        <ImageView
+            android:id="@+id/imgPokemon"
+            android:layout_width="120dp"
+            android:layout_height="105dp"
+            android:layout_alignTop="@+id/imgPokemonShiny"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_toLeftOf="@+id/imgPokemonShiny"
+            android:layout_toStartOf="@+id/imgPokemonShiny"
+            android:contentDescription="@string/picture_description" />
 
-    <ImageView
-        android:id="@+id/imgPokemonShiny"
-        android:layout_width="120dp"
-        android:layout_height="105dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"
-        android:layout_marginTop="33dp"
-        android:contentDescription="@string/picture_description" />
+        <ImageView
+            android:id="@+id/imgPokemonShiny"
+            android:layout_width="120dp"
+            android:layout_height="105dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="61dp"
+            android:layout_marginRight="61dp"
+            android:layout_marginTop="52dp"
+            android:contentDescription="@string/picture_description" />
 
-    <TextView
-        android:id="@+id/textShiny"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imgPokemonShiny"
-        android:layout_alignLeft="@+id/imgPokemonShiny"
-        android:layout_alignRight="@+id/imgPokemonShiny"
-        android:layout_alignStart="@+id/imgPokemonShiny"
-        android:layout_below="@+id/imgPokemonShiny"
-        android:text="@string/text_shiny_sprite"
-        android:textAlignment="center" />
+        <TextView
+            android:id="@+id/textShiny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imgPokemonShiny"
+            android:layout_alignLeft="@+id/imgPokemonShiny"
+            android:layout_alignRight="@+id/imgPokemonShiny"
+            android:layout_alignStart="@+id/imgPokemonShiny"
+            android:layout_below="@+id/imgPokemonShiny"
+            android:text="@string/text_shiny_sprite"
+            android:textAlignment="center" />
 
-    <TextView
-        android:id="@+id/textDefault"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imgPokemon"
-        android:layout_alignLeft="@+id/imgPokemon"
-        android:layout_alignRight="@+id/imgPokemon"
-        android:layout_alignStart="@+id/imgPokemon"
-        android:layout_below="@+id/imgPokemon"
-        android:text="@string/text_default_sprite"
-        android:textAlignment="center" />
+        <TextView
+            android:id="@+id/textDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imgPokemon"
+            android:layout_alignLeft="@+id/imgPokemon"
+            android:layout_alignRight="@+id/imgPokemon"
+            android:layout_alignStart="@+id/imgPokemon"
+            android:layout_below="@+id/imgPokemon"
+            android:gravity="center_horizontal"
+            android:text="@string/text_default_sprite"
+            android:textAlignment="center" />
 
-    <TextView
-        android:id="@+id/pokemonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textShiny"
-        android:layout_alignLeft="@+id/textDefault"
-        android:layout_alignRight="@+id/textShiny"
-        android:layout_alignStart="@+id/textDefault"
-        android:layout_below="@+id/textDefault"
-        android:layout_marginTop="36dp"
-        android:text="TextView"
-        android:textAlignment="center" />
+        <TextView
+            android:id="@+id/pokemonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textShiny"
+            android:layout_alignLeft="@+id/textDefault"
+            android:layout_alignRight="@+id/textShiny"
+            android:layout_alignStart="@+id/textDefault"
+            android:layout_below="@+id/textDefault"
+            android:layout_marginTop="36dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/pokemonName"
-        android:layout_alignStart="@+id/pokemonName"
-        android:layout_below="@+id/pokemonName"
-        android:layout_marginTop="24dp"
-        android:text="TextView" />
+        <TextView
+            android:id="@+id/stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/pokemonName"
+            android:layout_alignLeft="@+id/pokemonName"
+            android:layout_alignRight="@+id/pokemonName"
+            android:layout_alignStart="@+id/pokemonName"
+            android:layout_below="@+id/pokemonName"
+            android:layout_marginTop="24dp"
+            android:gravity="start"
+            android:text="@string/stats"
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="21dp"
-        android:text="TextView" />
+        <TextView
+            android:id="@+id/baseAttack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/stats"
+            android:layout_alignStart="@+id/stats"
+            android:layout_below="@+id/stats"
+            android:layout_marginTop="15dp"
+            android:gravity="start"
+            android:text="@string/baseAttack"
+            android:textAlignment="viewStart" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignLeft="@+id/textShiny"
-        android:layout_alignStart="@+id/textShiny"
-        android:text="TextView" />
+        <TextView
+            android:id="@+id/attackValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/baseAttack"
+            android:layout_alignBottom="@+id/baseAttack"
+            android:layout_alignLeft="@+id/textShiny"
+            android:layout_alignStart="@+id/textShiny"
+            android:text="" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView4"
-        android:layout_alignLeft="@+id/textView6"
-        android:layout_alignStart="@+id/textView6"
-        android:text="TextView" />
+        <TextView
+            android:id="@+id/baseDefence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/baseAttack"
+            android:layout_alignStart="@+id/baseAttack"
+            android:layout_below="@+id/baseAttack"
+            android:gravity="start"
+            android:text="@string/baseDefence"
+            android:textAlignment="viewStart" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/defenceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/baseDefence"
+            android:layout_alignLeft="@+id/attackValue"
+            android:layout_alignStart="@+id/attackValue"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/baseStamina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/baseDefence"
+            android:layout_alignStart="@+id/baseDefence"
+            android:layout_below="@+id/baseDefence"
+            android:gravity="start"
+            android:text="@string/baseStamina"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/staminaValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/defenceValue"
+            android:layout_alignStart="@+id/defenceValue"
+            android:layout_alignTop="@+id/baseStamina"
+            android:text="" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/stats"
+            android:layout_alignRight="@+id/stats"
+            android:layout_alignTop="@+id/attackValue"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_toEndOf="@+id/imgPokemon"
+            android:layout_toRightOf="@+id/imgPokemon" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/staminaValue"
+            android:layout_alignEnd="@+id/progressBar"
+            android:layout_alignLeft="@+id/progressBar"
+            android:layout_alignRight="@+id/progressBar"
+            android:layout_alignStart="@+id/progressBar" />
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/staminaValue"
+            android:layout_alignEnd="@+id/progressBar2"
+            android:layout_alignLeft="@+id/progressBar2"
+            android:layout_alignRight="@+id/progressBar2"
+            android:layout_alignStart="@+id/progressBar2" />
+
+        <TextView
+            android:id="@+id/movesets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buddyDistance"
+            android:layout_alignStart="@+id/buddyDistance"
+            android:layout_below="@+id/buddyDistance"
+            android:layout_marginTop="12dp"
+            android:text="@string/movesets"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/movesetsFast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/movesets"
+            android:layout_alignStart="@+id/movesets"
+            android:layout_below="@+id/movesets"
+            android:layout_marginTop="12dp"
+            android:gravity="start"
+            android:text=""
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/movesetsCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/movesets"
+            android:layout_alignStart="@+id/movesets"
+            android:layout_below="@+id/movesetsFast"
+            android:gravity="start"
+            android:text=""
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:id="@+id/buddyDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/baseStamina"
+            android:layout_alignStart="@+id/baseStamina"
+            android:layout_below="@+id/baseStamina"
+            android:layout_marginTop="13dp"
+            android:text="@string/buddyDistance"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/buddyDistanceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buddyDistance"
+            android:layout_alignBottom="@+id/buddyDistance"
+            android:layout_toEndOf="@+id/staminaValue"
+            android:layout_toRightOf="@+id/staminaValue"
+            android:text="" />
+    </RelativeLayout>
+</ScrollView>

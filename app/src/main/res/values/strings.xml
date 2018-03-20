@@ -9,4 +9,10 @@
     <string name="gen_one_button">Gen 1</string>
     <string name="gen_two_button">Gen 2</string>
     <string name="gen_three_button">Gen 3</string>
+    <string name="stats">Stats</string>
+    <string name="baseAttack">Base Attack</string>
+    <string name="baseDefence">Base Defence</string>
+    <string name="baseStamina">Base Stamina</string>
+    <string name="movesets">Movesets</string>
+    <string name="buddyDistance">Buddy Distance (km)</string>
 </resources>
