@@ -77,16 +77,23 @@ class PokemonDetailView: AppCompatActivity() {
                 pokemonData[dexNum].types[1].name == "Grass" -> secondaryType.setImageResource(R.drawable.grass)
             }
         }
+
         // get buddy distance
-        val buddyDistance = pokemonData[dexNum].kmBuddyDistance.toString() + " km"
+        val buddyDistance = "Buddy Distance: " + pokemonData[dexNum].kmBuddyDistance.toString() + " km"
         buddyDistanceValue.text = buddyDistance
+
         // get maxCP
         val maxCpText = "Max CP: " + pokemonData[dexNum].maxCP.toString()
         maxCp.text = maxCpText
+
         // get stats
-        attackValue.text = pokemonData[dexNum].stats.baseAttack.toString()
-        defenceValue.text = pokemonData[dexNum].stats.baseDefense.toString()
-        staminaValue.text = pokemonData[dexNum].stats.baseStamina.toString()
+        val baseAttackText = "Attack: " + pokemonData[dexNum].stats.baseAttack.toString()
+        val baseDefenceText = "Defence: " + pokemonData[dexNum].stats.baseDefense.toString()
+        val baseStaminaText = "Stamina: " + pokemonData[dexNum].stats.baseStamina.toString()
+
+        attackValue.text = baseAttackText
+        defenceValue.text = baseDefenceText
+        staminaValue.text = baseStaminaText
 
         // view the stats in comparision to the best/worst stats in the game
         progressBar.max = 300

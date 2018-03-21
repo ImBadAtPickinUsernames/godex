@@ -20,7 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".PokemonDetailView"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.imbadatpickindomains.godex.MainActivity">
+            <!--android:label="@string/"-->
 
         </activity>
 
