@@ -22,8 +22,7 @@
         <activity android:name=".PokemonDetailView"
             android:screenOrientation="portrait"
             android:parentActivityName="com.imbadatpickindomains.godex.MainActivity">
-            <!--android:label="@string/"-->
-
+            <!--android:label="@string/p"-->
         </activity>
 
 </application>

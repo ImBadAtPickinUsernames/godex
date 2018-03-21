@@ -12,59 +12,24 @@
         android:id="@+id/gvEntrys"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/navigation"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:columnWidth="100dp"
         android:horizontalSpacing="0dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="0dp" />
-    <!-- android:layout_marginTop="60dp"  -->
+        android:verticalSpacing="0dp"
+        android:numColumns="auto_fit" />
+    <!--android:layout_above="@+id/navigation"-->
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation" />
-<!--
-    <ImageButton
-        android:id="@+id/buttonGenOne"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_toLeftOf="@+id/buttonGenTwo"
-        android:layout_toStartOf="@+id/buttonGenTwo"
-        android:text="@string/gen_one_button"
-        android:src="@drawable/p2"
-        android:contentDescription="TODO" />
+    <!--
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/navigation" />
+      -->
 
-    <ImageButton
-        android:id="@+id/buttonGenTwo"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/gen_two_button"
-        android:src="@drawable/p2"
-        android:contentDescription="TODO" />
-
-    <ImageButton
-        android:id="@+id/buttonGenThree"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="35dp"
-        android:layout_marginStart="35dp"
-        android:layout_toEndOf="@+id/buttonGenTwo"
-        android:layout_toRightOf="@+id/buttonGenTwo"
-        android:text="@string/gen_three_button"
-        android:src="@drawable/p2"
-        android:contentDescription="TODO" />
--->
-</RelativeLayout>
+    </RelativeLayout>

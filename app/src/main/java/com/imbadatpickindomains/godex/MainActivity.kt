@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        //navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         // loads the pokemon-sprites and names
         initGView()
         // no use

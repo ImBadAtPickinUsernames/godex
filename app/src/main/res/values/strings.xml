@@ -13,10 +13,12 @@
     <string name="baseAttack">Attack</string>
     <string name="baseDefence">Defence</string>
     <string name="baseStamina">Stamina</string>
-    <string name="movesets">Movesets</string>
+    <string name="moves">Moves</string>
+    <string name="advancedDetailsHeader">Advanced Details</string>
     <string name="buddyDistance">Buddy Distance</string>
     <string name="pokemonNamePlaceholder">Pokemon Name</string>
     <string name="placeholder1">999</string>
+    <string name="placeholder2">lorem ipsum</string>
     <string name="showDetailsButton">Advanced Details</string>
     <string name="showMovesButton">Moves</string>
 </resources>

@@ -17,6 +17,8 @@ class PokemonDetailView: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.pokedex_detail_view)
         val bundle = intent.extras
+
+
         fillPage(pd.getPokemonData(this), pd.getMoveData(this), bundle.getInt("dexNum"), this)
     }
 
@@ -130,6 +132,16 @@ class PokemonDetailView: AppCompatActivity() {
             }
             movesetsCharge.append("${moveName.name}   $dmg   [ $type ]\n")
         }
+
+        // getting advanced details
+        val attackProbabilityText = "Attack Probability: " + pokemonData[dexNum].encounter.attackProbability.toString()
+        attackProbability.text = attackProbabilityText
+        val baseFleeRateText = "Base Flee Rate: " + pokemonData[dexNum].encounter.baseFleeRate.toString()
+        baseFleeRate.text = baseFleeRateText
+        val baseCaptureRateText = "Base Capture Rate: " + pokemonData[dexNum].encounter.baseCaptureRate.toString()
+        baseCaptureRate.text = baseCaptureRateText
+        val dodgeProbabilityText = "Dodge Probability: " + pokemonData[dexNum].encounter.dodgeProbability.toString()
+        dodgeProbability.text = dodgeProbabilityText
     }
 
 }
