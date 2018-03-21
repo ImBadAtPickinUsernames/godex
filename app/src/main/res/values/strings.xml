@@ -14,5 +14,7 @@
     <string name="baseDefence">Base Defence</string>
     <string name="baseStamina">Base Stamina</string>
     <string name="movesets">Movesets</string>
-    <string name="buddyDistance">Buddy Distance (km)</string>
+    <string name="buddyDistance">Buddy Distance</string>
+    <string name="pokemonNamePlaceholder">Pokemon Name</string>
+    <string name="placeholder1">999</string>
 </resources>

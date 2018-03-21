@@ -12,22 +12,31 @@ import java.nio.charset.Charset
 
 class PokedexData {
 
-    fun loadJSONFromAsset(context: Context): String? {
+    fun loadPokemonJSON(context: Context): String? {
         val data: String?
         try {
             val `is` = context.assets.open("pokemon.json")
-
             val size = `is`.available()
-
             val buffer = ByteArray(size)
-
             `is`.read(buffer)
-
             `is`.close()
-
             data = String(buffer, Charset.forName("UTF-8"))
+        } catch (ex: IOException) {
+            ex.printStackTrace()
+            return null
+        }
+        return data
+    }
 
-
+    fun loadMoveJSON(context: Context): String? {
+        val data: String?
+        try {
+            val `is` = context.assets.open("move.json")
+            val size = `is`.available()
+            val buffer = ByteArray(size)
+            `is`.read(buffer)
+            `is`.close()
+            data = String(buffer, Charset.forName("UTF-8"))
         } catch (ex: IOException) {
             ex.printStackTrace()
             return null
@@ -38,11 +47,18 @@ class PokedexData {
     fun getPokemonData(context: Context): List<Pokemon> {
         val gson = GsonBuilder().setPrettyPrinting().create()
 
-        val pokemonList: List<Pokemon> = gson.fromJson(loadJSONFromAsset(context), object : TypeToken<List<Pokemon>>() {}.type)
+        val pokemonList: List<Pokemon> = gson.fromJson(loadPokemonJSON(context), object : TypeToken<List<Pokemon>>() {}.type)
         //pokemonList.forEach { println(it) }
         return pokemonList
     }
 
+    fun getMoveData(context: Context): List<Move> {
+        val gson = GsonBuilder().setPrettyPrinting().create()
+
+        val moveList: List<Move> = gson.fromJson(loadMoveJSON(context), object : TypeToken<List<Move>>() {}.type)
+        //moveList.forEach { println(it) }
+        return moveList
+    }
 
     fun getPokemonNames(): Array<String> {
         var pokeArray = arrayOf (

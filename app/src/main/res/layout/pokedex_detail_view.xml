@@ -9,8 +9,8 @@
 
         <ImageView
             android:id="@+id/imgPokemon"
-            android:layout_width="120dp"
-            android:layout_height="105dp"
+            android:layout_width="130dp"
+            android:layout_height="115dp"
             android:layout_alignTop="@+id/imgPokemonShiny"
             android:layout_marginEnd="13dp"
             android:layout_marginRight="13dp"
@@ -20,14 +20,33 @@
 
         <ImageView
             android:id="@+id/imgPokemonShiny"
-            android:layout_width="120dp"
-            android:layout_height="105dp"
+            android:layout_width="130dp"
+            android:layout_height="115dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="61dp"
-            android:layout_marginRight="61dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="74dp"
+            android:contentDescription="@string/picture_description" />
+
+        <ImageView
+            android:id="@+id/imgSecondaryType"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_above="@+id/imgPokemon"
+            android:layout_alignEnd="@+id/imgPokemonShiny"
+            android:layout_alignRight="@+id/imgPokemonShiny"
+            android:layout_marginBottom="11dp"
+            android:contentDescription="@string/picture_description" />
+
+        <ImageView
+            android:id="@+id/imgPrimaryType"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_above="@+id/imgSecondaryType"
+            android:layout_alignLeft="@+id/imgSecondaryType"
+            android:layout_alignStart="@+id/imgSecondaryType"
             android:contentDescription="@string/picture_description" />
 
         <TextView
@@ -40,7 +59,8 @@
             android:layout_alignStart="@+id/imgPokemonShiny"
             android:layout_below="@+id/imgPokemonShiny"
             android:text="@string/text_shiny_sprite"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textDefault"
@@ -53,36 +73,34 @@
             android:layout_below="@+id/imgPokemon"
             android:gravity="center_horizontal"
             android:text="@string/text_default_sprite"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/pokemonName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/textShiny"
-            android:layout_alignLeft="@+id/textDefault"
-            android:layout_alignRight="@+id/textShiny"
-            android:layout_alignStart="@+id/textDefault"
-            android:layout_below="@+id/textDefault"
-            android:layout_marginTop="36dp"
-            android:text=""
-            android:textAlignment="center"
+            android:layout_alignEnd="@+id/attackValue"
+            android:layout_alignLeft="@+id/imgPokemon"
+            android:layout_alignRight="@+id/attackValue"
+            android:layout_alignStart="@+id/imgPokemon"
+            android:layout_alignTop="@+id/imgPrimaryType"
+            android:text="@string/pokemonNamePlaceholder"
+            android:textAlignment="textStart"
             android:textAllCaps="false"
-            android:textStyle="bold" />
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="start" />
 
         <TextView
             android:id="@+id/stats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/pokemonName"
-            android:layout_alignLeft="@+id/pokemonName"
-            android:layout_alignRight="@+id/pokemonName"
-            android:layout_alignStart="@+id/pokemonName"
-            android:layout_below="@+id/pokemonName"
-            android:layout_marginTop="24dp"
-            android:gravity="start"
+            android:layout_alignLeft="@+id/textDefault"
+            android:layout_alignStart="@+id/textDefault"
+            android:layout_below="@+id/buddyDistance"
+            android:layout_marginTop="16dp"
             android:text="@string/stats"
-            android:textAlignment="textStart"
             android:textStyle="bold" />
 
         <TextView
@@ -92,7 +110,7 @@
             android:layout_alignLeft="@+id/stats"
             android:layout_alignStart="@+id/stats"
             android:layout_below="@+id/stats"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:gravity="start"
             android:text="@string/baseAttack"
             android:textAlignment="viewStart" />
@@ -105,7 +123,7 @@
             android:layout_alignBottom="@+id/baseAttack"
             android:layout_alignLeft="@+id/textShiny"
             android:layout_alignStart="@+id/textShiny"
-            android:text="" />
+            android:text="@string/placeholder1" />
 
         <TextView
             android:id="@+id/baseDefence"
@@ -125,7 +143,7 @@
             android:layout_alignBottom="@+id/baseDefence"
             android:layout_alignLeft="@+id/attackValue"
             android:layout_alignStart="@+id/attackValue"
-            android:text="" />
+            android:text="@string/placeholder1" />
 
         <TextView
             android:id="@+id/baseStamina"
@@ -145,51 +163,49 @@
             android:layout_alignLeft="@+id/defenceValue"
             android:layout_alignStart="@+id/defenceValue"
             android:layout_alignTop="@+id/baseStamina"
-            android:text="" />
+            android:text="@string/placeholder1" />
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/stats"
-            android:layout_alignRight="@+id/stats"
-            android:layout_alignTop="@+id/attackValue"
-            android:layout_marginLeft="35dp"
-            android:layout_marginStart="35dp"
-            android:layout_toEndOf="@+id/imgPokemon"
-            android:layout_toRightOf="@+id/imgPokemon" />
+            android:layout_alignEnd="@+id/textShiny"
+            android:layout_alignLeft="@+id/imgPrimaryType"
+            android:layout_alignRight="@+id/textShiny"
+            android:layout_alignStart="@+id/imgPrimaryType"
+            android:layout_alignTop="@+id/attackValue" />
 
         <ProgressBar
             android:id="@+id/progressBar2"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/staminaValue"
             android:layout_alignEnd="@+id/progressBar"
             android:layout_alignLeft="@+id/progressBar"
             android:layout_alignRight="@+id/progressBar"
-            android:layout_alignStart="@+id/progressBar" />
+            android:layout_alignStart="@+id/progressBar"
+            android:layout_below="@+id/attackValue" />
 
         <ProgressBar
             android:id="@+id/progressBar3"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/staminaValue"
             android:layout_alignEnd="@+id/progressBar2"
             android:layout_alignLeft="@+id/progressBar2"
             android:layout_alignRight="@+id/progressBar2"
-            android:layout_alignStart="@+id/progressBar2" />
+            android:layout_alignStart="@+id/progressBar2"
+            android:layout_below="@+id/defenceValue" />
 
         <TextView
             android:id="@+id/movesets"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/buddyDistance"
-            android:layout_alignStart="@+id/buddyDistance"
-            android:layout_below="@+id/buddyDistance"
-            android:layout_marginTop="12dp"
+            android:layout_alignLeft="@+id/baseStamina"
+            android:layout_alignStart="@+id/baseStamina"
+            android:layout_below="@+id/baseStamina"
+            android:layout_marginTop="11dp"
             android:text="@string/movesets"
             android:textStyle="bold" />
 
@@ -200,7 +216,7 @@
             android:layout_alignLeft="@+id/movesets"
             android:layout_alignStart="@+id/movesets"
             android:layout_below="@+id/movesets"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="5dp"
             android:gravity="start"
             android:text=""
             android:textAlignment="viewStart" />
@@ -212,6 +228,7 @@
             android:layout_alignLeft="@+id/movesets"
             android:layout_alignStart="@+id/movesets"
             android:layout_below="@+id/movesetsFast"
+            android:layout_marginBottom="5dp"
             android:gravity="start"
             android:text=""
             android:textAlignment="viewStart" />
@@ -220,10 +237,12 @@
             android:id="@+id/buddyDistance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/baseStamina"
-            android:layout_alignStart="@+id/baseStamina"
-            android:layout_below="@+id/baseStamina"
-            android:layout_marginTop="13dp"
+            android:layout_alignEnd="@+id/textDefault"
+            android:layout_alignLeft="@+id/stats"
+            android:layout_alignRight="@+id/textDefault"
+            android:layout_alignStart="@+id/stats"
+            android:layout_below="@+id/maxCp"
+            android:layout_marginTop="17dp"
             android:text="@string/buddyDistance"
             android:textStyle="bold" />
 
@@ -233,8 +252,21 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/buddyDistance"
             android:layout_alignBottom="@+id/buddyDistance"
-            android:layout_toEndOf="@+id/staminaValue"
-            android:layout_toRightOf="@+id/staminaValue"
-            android:text="" />
+            android:layout_alignLeft="@+id/textShiny"
+            android:layout_alignStart="@+id/textShiny"
+            android:text="@string/placeholder1" />
+
+        <TextView
+            android:id="@+id/maxCp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textDefault"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/placeholder1"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 </ScrollView>
