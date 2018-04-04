@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fastScrollThumbDrawable">@drawable/fast_thumb</item>
+        <item name="android:fastScrollTrackDrawable">@color/colorAccent</item>
     </style>
     <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
         <item name="android:buttonStyle">
@@ -22,4 +24,9 @@
         <item name="contentPaddingRight">16dp</item>
         <item name="cardBackgroundColor"></item> -->
     </style>
+    <style name="FastScrollTheme" parent="Theme.AppCompat.Light">
+        <item name="android:fastScrollThumbDrawable">@drawable/fast_thumb</item>
+        <item name="android:fastScrollTrackDrawable">@color/colorAccent</item>
+    </style>
+
 </resources>

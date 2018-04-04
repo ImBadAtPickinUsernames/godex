@@ -19,10 +19,10 @@ class PokemonDetailView: AppCompatActivity() {
         val bundle = intent.extras
 
 
-        fillPage(pd.getPokemonData(this), pd.getMoveData(this), bundle.getInt("dexNum"), this)
+        fillPage(pd.getPokemonData(this), pd.getMoveData(this), bundle.getInt("dexNum")/*, this*/)
     }
 
-    private fun fillPage(pokemonData: List<Pokemon>,pokemonMove: List<Move>, dexNum:Int, context: Context) {
+    private fun fillPage(pokemonData: List<Pokemon>,pokemonMove: List<Move>, dexNum:Int /*, context: Context*/ ) {
         val name = "p" + dexNum.inc()
         val shinyName = "s" + dexNum.inc()
         val resID = resources.getIdentifier(name, "drawable", packageName)
@@ -90,11 +90,11 @@ class PokemonDetailView: AppCompatActivity() {
 
         // get stats
         val baseAttackText = "Attack: " + pokemonData[dexNum].stats.baseAttack.toString()
-        val baseDefenceText = "Defence: " + pokemonData[dexNum].stats.baseDefense.toString()
+        val baseDefenseText = "Defence: " + pokemonData[dexNum].stats.baseDefense.toString()
         val baseStaminaText = "Stamina: " + pokemonData[dexNum].stats.baseStamina.toString()
 
         attackValue.text = baseAttackText
-        defenceValue.text = baseDefenceText
+        defenseValue.text = baseDefenseText
         staminaValue.text = baseStaminaText
 
         // view the stats in comparision to the best/worst stats in the game

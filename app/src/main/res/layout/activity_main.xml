@@ -6,6 +6,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context="com.imbadatpickindomains.godex.MainActivity">
 
     <GridView
@@ -17,7 +18,10 @@
         android:columnWidth="100dp"
         android:horizontalSpacing="0dp"
         android:verticalSpacing="0dp"
-        android:numColumns="auto_fit" />
+        android:numColumns="auto_fit"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="false"
+        android:scrollbarStyle="outsideOverlay" />
     <!--android:layout_above="@+id/navigation"-->
 
     <!--

@@ -11,7 +11,7 @@
     <string name="gen_three_button">Gen 3</string>
     <string name="stats">Base Stats</string>
     <string name="baseAttack">Attack</string>
-    <string name="baseDefence">Defence</string>
+    <string name="baseDefense">Defense</string>
     <string name="baseStamina">Stamina</string>
     <string name="moves">Moves</string>
     <string name="advancedDetailsHeader">Advanced Details</string>
